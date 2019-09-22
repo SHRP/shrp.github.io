@@ -1,6 +1,6 @@
 # Bring Up SHRP
 
-1. First create a file in root of your device tree `shrp_env.sh`
+1. First create a file in root of your device tree `shrp_env.sh` and add device specific properties.
 
 ```bash
 # !/bin/bash
