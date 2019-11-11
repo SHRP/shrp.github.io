@@ -9,7 +9,7 @@ Get in contact with us though one of the following options.
 * [Telegram Channel](https://t.me/shrp_official)
 
 
-## Credits
+## Team
 
 * EpicX (Founder)
 * DNI9
