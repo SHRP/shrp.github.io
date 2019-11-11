@@ -13,4 +13,5 @@ Get in contact with us though one of the following options.
 
 * EpicX (Founder)
 * DNI9
-* more to come
+* Giovix92
+
