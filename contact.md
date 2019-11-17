@@ -14,4 +14,14 @@ Get in contact with us though one of the following options.
 * EpicX (Founder)
 * DNI9
 * Giovix92
-* more to come
+
+## Special thanks:
+* @osm0sis@XDA for AIK (Android Image Kitchen)
+* Teamwin' team for their TWRP base
+* Mauronofrio@XDA for his inject twrp commit
+* @topjohnwu@XDA for Magisk and Magiskboot
+* @VR25@XDA for Magisk Manager scripts
+* Kirill
+* Burak D. 
+* ZJRDroid 
+* LayeardDevMod
