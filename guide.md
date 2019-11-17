@@ -1,30 +1,32 @@
 # Bring Up SHRP
 
-1. First create a file in root of your device tree `shrp_env.sh` and add device specific properties.
-
-```bash
-# !/bin/bash
-export SHRP_MAINTAINER="epicX"  # Maintainer name
-export SHRP_DEVICE_CODE="c103"  # Device codename
-export SHRP_EDL_MODE="1"  # put this 0 if device has no EDL mode
-export SHRP_EXTERNAL="/external_sd"
-export SHRP_INTERNAL="/sdcard"
-export SHRP_OTG="/usb-otg"
-export SHRP_FLASH="1"  # Put 0 to disable flashlight
-export SHRP_FLASH_MAX_BRIGHTNESS="200"
-
-# These are led paths, find yours then put here
-export SHRP_FONP_1="/sys/class/leds/led:torch_0/brightness"
-export SHRP_FONP_2="/sys/class/leds/led:torch_1/brightness"
-export SHRP_FONP_3="/sys/class/leds/led:switch/brightness"
-export SHRP_REC="/dev/block/bootdevice/by-name/recovery"  # Check your device's recovery path, dont use blindly
-```
- *** Don't remove any line , just leave it blank ! ***
-
-2. Add this to `BoardConfig.mk`
+1. Add device specific properties. `BoardConfig.mk`
 ```bash
 SHRP_PATH := device/brand/codename
+# Maintainer name
+SHRP_MAINTAINER := epicX
+# Device codename
+SHRP_DEVICE_CODE := c103
+# put this 0 if device has no EDL mode
+SHRP_EDL_MODE := 1
+SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb_otg
+# Put 0 to disable flashlight
+SHRP_FLASH := 1
+# These are led paths, find yours then put here
+SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
+SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
+SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
+# Max Brightness of LED
+SHRP_FLASH_MAX_BRIGHTNESS := 200
+# Check your device's recovery path, dont use blindly
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+# Put true if your device A/B
+SHRP_AB := false
 ```
+
+ *** Don't remove any line , just leave it blank ! ***
 
 # Build SHRP
 
