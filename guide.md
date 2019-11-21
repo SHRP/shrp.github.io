@@ -23,7 +23,7 @@ SHRP_FLASH_MAX_BRIGHTNESS := 200
 # Check your device's recovery path, dont use blindly
 SHRP_REC := /dev/block/bootdevice/by-name/recovery
 # Use this flag only if your device is A/B
-SHRP_AB := false
+SHRP_AB := true
 ```
 
  *** Don't remove any line , just leave it blank ! ***
