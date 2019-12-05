@@ -3,5 +3,5 @@
 * [Build Guide](guide.md)
 * [XDA Example Thread](xda.md)
 * [Changelogs](changelogs.md)
-* [Changelogs](faq.md)
+* [FAQs](faq.md)
 * [Contact](contact.md)
