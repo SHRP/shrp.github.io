@@ -1,5 +1,3 @@
-# Changelogs
-
 ## SHRP 2.1 Changelogs
 
 * Security flaw fixed
