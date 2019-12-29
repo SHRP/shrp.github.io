@@ -26,7 +26,6 @@ SHRP_REC := /dev/block/bootdevice/by-name/recovery
 SHRP_AB := true
 ```
 
- *** Don't remove any line , just leave it blank ! ***
 
 # Build SHRP
 
