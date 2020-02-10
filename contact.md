@@ -4,7 +4,7 @@ Get in contact with us though one of the following options.
 
 ## Links
 
-* [Website](https://shrp.cf)
+* [Website](https://skyhawkrecovery.github.io/)
 * [Telegram Group](https://t.me/sky_hawk)
 * [Telegram Channel](https://t.me/shrp_official)
 
