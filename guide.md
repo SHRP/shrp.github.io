@@ -31,7 +31,9 @@ SHRP_REC_TYPE := Treble
 # Recovery Type (It can be A/B or A_only) [Only for About Section]
 SHRP_DEVICE_TYPE := A_Only
 ```
+
 # Reference Configuration
+
 ```bash
 https://raw.githubusercontent.com/epicX67/twrp_device_coolpad_c103/treble/BoardConfig.mk
 ```
