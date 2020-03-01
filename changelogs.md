@@ -1,3 +1,30 @@
+## SHRP 2.2 Changelogs
+
+* Bump to SHRP 2.2
+* Added Oppo/Realme OZIP support (#1)
+* Fixed /system & /system_root remount
+* Added more accents + icons/set-ups to theming room
+* Changed initialization's behaviour for themes
+* Fixed translations
+* Added Dev mode
+* Redesigned "About" section
+* Added Zip/Unzip functions
+* Improved file manager look + behavior
+* Added a clear button in text boxes
+* Fixed random reboots while selecting files
+* Added flag to skip compatibility.zip check (#2)
+* Upstreamed to Magiskboot 20.3 + Magisk 20.0 (#3)
+* Added Magisk survival (#3 for Magisk ZIP)
+* Upstreamed from TWRP (#4)
+* Fixed Splashscreen view for non 16:9 devices (#5)
+* Upstreamed Magisk Manager (#6)
+
+Changelog - A/B:
+* Added full support
+* Added theming support
+* Fixed ZIP creation
+
+
 ## SHRP 2.1 Changelogs
 
 * Security flaw fixed
