@@ -1,4 +1,4 @@
-## SHRP 2.2 Changelogs
+# SHRP 2.2 Changelogs
 
 * Bump to SHRP 2.2
 * Added Oppo/Realme OZIP support (#1)
@@ -19,7 +19,7 @@
 * Fixed Splashscreen view for non 16:9 devices (#5)
 * Upstreamed Magisk Manager (#6)
 
-Changelog - A/B:
+### Changelog - A/B:
 * Added full support
 * Added theming support
 * Fixed ZIP creation
