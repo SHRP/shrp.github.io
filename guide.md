@@ -30,6 +30,9 @@ SHRP_AB := true
 SHRP_REC_TYPE := Treble
 # Recovery Type (It can be A/B or A_only) [Only for About Section]
 SHRP_DEVICE_TYPE := A_Only
+# SHRP Padding Flag (Only for rounded corner devices.)
+SHRP_STATUSBAR_RIGHT_PADDING := 40
+SHRP_STATUSBAR_LEFT_PADDING := 40
 ```
 
 # Reference Configuration
