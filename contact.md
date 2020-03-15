@@ -25,3 +25,5 @@ Get in contact with us though one of the following options.
 * Burak D. 
 * ZJRDroid 
 * LayeardDevMod
+* Olek
+* Oliwier
