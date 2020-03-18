@@ -17,6 +17,7 @@ SHRP_OTG := /usb_otg
 # Put 0 to disable flashlight
 SHRP_FLASH := 1
 # These are led paths, find yours then put here (Optional)
+SHRP_CUSTOM_FLASHLIGHT := true
 SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
 SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
 SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
