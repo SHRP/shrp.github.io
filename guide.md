@@ -52,7 +52,7 @@ https://raw.githubusercontent.com/epicX67/twrp_device_coolpad_c103/treble/BoardC
 * To initialize your local repository using the OMNIROM trees to build SHRP, use a command like this:
 
 ```bash
-repo init -u git://github.com/SKYHAWK-Recovery-Project/platform_manifest_twrp_omni.git -b 9.0
+repo init -u git://github.com/SKYHAWK-Recovery-Project/platform_manifest_twrp_omni.git -b android-9.0
 ```
 * Then to sync up:
 
