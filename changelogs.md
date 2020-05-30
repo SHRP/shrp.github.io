@@ -39,14 +39,14 @@
 * Fixed ZIP creation
 
 
-## SHRP 2.1 Changelogs
+# SHRP 2.1 Changelogs
 
 * Security flaw fixed
 * Italian lang added
 * Themes are more stable
 * some gui improvements
 
-## SHRP 2.0 Changelogs
+# SHRP 2.0 Changelogs
 
 **Major Changes**
 
