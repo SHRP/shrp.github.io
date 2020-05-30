@@ -12,6 +12,7 @@
 * GUI Improvements
 * Fix some accesibility issues in lockscreen
 
+
 # SHRP 2.2 Changelogs
 
 * Bump to SHRP 2.2
