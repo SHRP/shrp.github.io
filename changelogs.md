@@ -1,3 +1,17 @@
+# SHRP 2.3 Changelogs
+
+* Bump to SHRP 2.3
+* Text Editor
+* Custom Theme
+* Security enhancements
+* Theme, Lock, Addon survival
+* Some OTA functionalities
+* SHRP Injection (A/B)
+* Magisk injection
+* Auto decrypt
+* GUI Improvements
+* Fix some accesibility issues in lockscreen
+
 # SHRP 2.2 Changelogs
 
 * Bump to SHRP 2.2
