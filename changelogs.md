@@ -1,4 +1,4 @@
-# SHRP 2.3 Changelogs
+## SHRP 2.3 Changelogs
 
 * Bump to SHRP 2.3
 * Text Editor
