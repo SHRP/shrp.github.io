@@ -38,6 +38,8 @@ SHRP_STATUSBAR_LEFT_PADDING := 40
 SHRP_EXPRESS := true
 # SHRP Dark mode, use this flag to have dark theme set by default
 SHRP_DARK := true
+# Force mount system in /system despite SAR policy, useful for maintaining backwards compatibility and/or Samsung devices.
+SHRP_NO_SAR_AUTOMOUNT := true
 ```
 
 # Reference Configuration
