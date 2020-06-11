@@ -21,6 +21,10 @@ Get in contact with us though one of the following options.
 * Mauronofrio@XDA for his inject twrp commit
 * @topjohnwu@XDA for Magisk and Magiskboot
 * @VR25@XDA for Magisk Manager scripts
+* steadfasterX for security enhancements
+* DarthJabba9 for /data fix
+* Corsicanu for SAR fixes
+* Oddlyspaced for SHRP App
 * Kirill
 * Burak D. 
 * ZJRDroid 
