@@ -1,6 +1,7 @@
 * [Home](/)
 * [Downloads](downloads.md)
 * [Build Guide](guide.md)
+* [Maintainers Guide](maintain.md)
 * [XDA Example Thread](xda.md)
 * [Changelogs](changelogs.md)
 * [FAQs](faq.md)
