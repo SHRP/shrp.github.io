@@ -1,0 +1,16 @@
+{
+    "name": "Skyhawk Recovery Project",
+    "short_name" : "SHRP",
+    "start_url": "index.html?utm_source=homescreen",
+    "scope" : "./",
+    "icons": [
+        {
+            "src": "./_media/shrp-logo.png",
+            "sizes": "250x183",
+            "type": "image/png"
+        },
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
