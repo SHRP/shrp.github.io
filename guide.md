@@ -1,3 +1,4 @@
+
 # Bring Up SHRP
 
 1. Add device specific properties. `BoardConfig.mk`
@@ -13,30 +14,22 @@ SHRP_DEVICE_CODE := c103
 SHRP_REC_TYPE := Treble
 # Recovery Type (It can be A/B or A_only) [Only for About Section] *
 SHRP_DEVICE_TYPE := A_Only
-
-
 # SHRP Padding Flag (Only for rounded corner devices.) [Optional]
 # You have to change these values according to your device's roundness.
 SHRP_STATUSBAR_RIGHT_PADDING := 40
 SHRP_STATUSBAR_LEFT_PADDING := 40
 # For Notch devices [Optional]
 SHRP_NOTCH := true
-
 # SHRP Express, enables on-the-fly theme patching (also persistent) + persistent lock [Optional]
 SHRP_EXPRESS := true
 # SHRP Dark mode, use this flag to have dark theme set by default [Optional]
 SHRP_DARK := true
-
-
 # put this 0 if device has no EDL mode *
 SHRP_EDL_MODE := 1
-
 # Put your device's paths from fstab *
 SHRP_EXTERNAL := /external_sd
 SHRP_INTERNAL := /sdcard
 SHRP_OTG := /usb_otg
-
-
 # Put 0 to disable flashlight *
 SHRP_FLASH := 1
 # These are led paths, find yours then put here [Optional]
@@ -46,8 +39,6 @@ SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
 SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
 # Max Brightness of LED [Optional]
 SHRP_FLASH_MAX_BRIGHTNESS := 200
-
-
 # Check your device's recovery path, dont use blindly *
 SHRP_REC := /dev/block/bootdevice/by-name/recovery
 # Use this flag only if your device is A/B *
