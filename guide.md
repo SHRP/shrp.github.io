@@ -1,50 +1,198 @@
 
 # Bring Up SHRP
 
-1. Add device specific properties. `BoardConfig.mk`
+Configure SHRP in `BoardConfig.mk`
 ```bash
-# NOTE - Dont use '-' or blank spaces in flag values , otherwise it will create build errors or other bugs in recovery (Excluding SHRP_PATH,SHRP_REC). 
-# Path of your SHRP Tree
-SHRP_PATH := device/brand/codename
-# Maintainer name *
-SHRP_MAINTAINER := epicX
-# Device codename *
-SHRP_DEVICE_CODE := c103
-# Recovery Type (It can be treble,normal,SAR) [Only for About Section] *
-SHRP_REC_TYPE := Treble
-# Recovery Type (It can be A/B or A_only) [Only for About Section] *
-SHRP_DEVICE_TYPE := A_Only
-# SHRP Padding Flag (Only for rounded corner devices.) [Optional]
-# You have to change these values according to your device's roundness.
-SHRP_STATUSBAR_RIGHT_PADDING := 40
-SHRP_STATUSBAR_LEFT_PADDING := 40
-# For Notch devices [Optional]
-SHRP_NOTCH := true
-# SHRP Express, enables on-the-fly theme patching (also persistent) + persistent lock [Optional]
-SHRP_EXPRESS := true
-# SHRP Dark mode, use this flag to have dark theme set by default [Optional]
-SHRP_DARK := true
-# put this 0 if device has no EDL mode *
-SHRP_EDL_MODE := 1
-# Put your device's paths from fstab *
-SHRP_EXTERNAL := /external_sd
+# NOTE:
+# Don't use '-' or blank spaces in flag values! 
+# These will create build errors or other bugs in recovery (Excluding SHRP_PATH,SHRP_REC).
+#
+# NOTE-2:
+# all values within these brackets: "<" ">" showing choice values and need to be 
+# replaced by you with the correct values!
+# Example: if the codename of your device is "gtexslte" <device-codename> becomes:
+# SHRP_DEVICE_CODE := gtexslte
+# (so without any brackets ofc!)
+
+################### ############################################
+# MANDATORY FLAGS # These flags HAVE TO be set/changed by you! #
+################### ############################################
+
+# Device codename
+# Default (if not set): N/A
+SHRP_DEVICE_CODE := <device-codename>
+
+# Path of your SHRP device tree
+# Replace <device-brand> with the device brand name
+# (SHRP_DEVICE_CODE will expand to the above variable so check if that is correct)
+SHRP_PATH := device/<device-brand>/$(SHRP_DEVICE_CODE)
+
+# Maintainer name
+# Default (if not set): N/A
+SHRP_MAINTAINER := <your-nick-name-here>
+
+# Recovery Type (for "About" section only)
+# Default (if not set): N/A
+SHRP_REC_TYPE := <Treble|Normal|SAR>
+
+# Device Type (for "About" section only)
+# Default (if not set): N/A
+SHRP_DEVICE_TYPE := <A_Only|A/B>
+
+# Your device's recovery path, dont use blindly
+# No default
+SHRP_REC := </dev/block/bootdevice/by-name/recovery>
+
+################### ################################################################################
+# IMPORTANT FLAGS # These are usually good to check - at least if the defaults are what you expect #
+################### ################################################################################
+
+# Emergency DownLoad mode (0 = no EDL mode, 1 = EDL mode available)
+# Default (if not set): 0
+SHRP_EDL_MODE := <0|1>
+
+# internal storage path
+# Default (if not set): /sdcard
 SHRP_INTERNAL := /sdcard
+
+# If your device has an external sdcard
+# Default (if not set): /
+SHRP_EXTERNAL := /external_sd
+
+# USB OTG path
+# Default (if not set): /
 SHRP_OTG := /usb_otg
-# Put 0 to disable flashlight *
-SHRP_FLASH := 1
-# These are led paths, find yours then put here [Optional]
+
+# Flashlight: (0 = disable, 1 = enable)
+# Default (if not set): 0
+SHRP_FLASH := <0|1>
+
+################## #########################################################################
+# OPTIONAL FLAGS # Stuff which highly depends on your device and / or personal preferences #
+################## #########################################################################
+
+# Use this flag only if your device is A/B.
+# Default (if not set) is no A/B device
+# Set this variable when true ONLY (do not use "false" or similiar)
+SHRP_AB := true
+
+# SHRP padding flag (for rounded corner devices only)
+# You have to change these values according to your device's roundness.
+SHRP_STATUSBAR_RIGHT_PADDING := <1-XXX>
+# Default (for LEFT): 20
+SHRP_STATUSBAR_LEFT_PADDING := <1-XXX>
+
+# For notch devices
+# Default (if not set) is no notch
+# Set this variable when true ONLY (do not use "false" or similiar)
+SHRP_NOTCH := true
+
+# SHRP Express, enables on-the-fly theme patching (also persistent) + persistent lock
+# Default (if not set) is not using Express
+# Set this variable when true ONLY (do not use "false" or similiar)
+SHRP_EXPRESS := true
+
+# SHRP Dark mode, use this flag to have dark theme set by default
+# Default (if not set) is not using DARK mode
+# Set this variable when true ONLY (do not use "false" or similiar)
+SHRP_DARK := true
+
+# custom led paths for flashlight
+# find yours then replace the examples here
 SHRP_CUSTOM_FLASHLIGHT := true
 SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
 SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
 SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
-# Max Brightness of LED [Optional]
+
+# Max brightness of flashlight
+# you can also check the above led paths in Android when you turn on flashlight
 SHRP_FLASH_MAX_BRIGHTNESS := 200
-# Check your device's recovery path, dont use blindly *
-SHRP_REC := /dev/block/bootdevice/by-name/recovery
-# Use this flag only if your device is A/B *
-SHRP_AB := true
-# Force mount system in /system despite SAR policy, useful for maintaining backwards compatibility and/or Samsung devices. [Optional]
+
+# Force mount system in /system despite SAR policy
+# useful for maintaining backwards compatibility and/or Samsung devices
+# Default (if not set) is to follow the SAR policy
+# Set this variable when true ONLY (do not use "false" or similiar)
 SHRP_NO_SAR_AUTOMOUNT := true
+
+# Do not include the SHRP theming system
+# Useful to save space for devices with a smaller recovery partition
+# Default (if not set) is full theming support
+# Set this variable when true ONLY (do not use "false" or similiar)
+SHRP_LITE := true
+
+################################## ##############################################
+# SHRP DEFAULT ADDONS - OPTIONAL # Default SHRP addon behavior - fully optional #
+################################## ##############################################
+
+# SHRP comes with a set of default addons.
+# This section allows to disable some or all of them, e.g. to save a little space
+# or when a device does not support / need them.
+
+# Addon - Substratum Overlay (OMS -Normal- disabler)
+# Default (if not set) is not skipping this addon (i.e. add it)
+SHRP_SKIP_DEFAULT_ADDON_1 := true
+# when SHRP_SKIP_DEFAULT_ADDON is set to true:
+# inject that addon into the recovery ramdisk
+# Default (if not set) is injecting this addon (if not skipped)
+INC_IN_REC_ADDON_1 := true
+
+# Addon - Substratum Overlay (OMS -legacy- disabler)
+# Default (if not set) is not skipping this addon (i.e. add it)
+SHRP_SKIP_DEFAULT_ADDON_2 := true
+# when SHRP_SKIP_DEFAULT_ADDON is set to true:
+# inject that addon into the recovery ramdisk
+# Default (if not set) is injecting this addon (if not skipped)
+INC_IN_REC_ADDON_2 := true
+
+# Addon - Clear Fingerprint (remove fingerprint lock from system)
+# Default (if not set) is not skipping this addon (i.e. add it)
+SHRP_SKIP_DEFAULT_ADDON_3 := true
+# inject that addon into the recovery ramdisk
+# Default (if not set) is injecting this addon (if not skipped)
+INC_IN_REC_ADDON_3 := true
+
+# Addon - Force Encryption (remove force encryption from your device)
+# Default (if not set) is not skipping this addon (i.e. add it)
+SHRP_SKIP_DEFAULT_ADDON_4 := true
+# inject that addon into the recovery ramdisk
+# Default (if not set) is injecting this addon (if not skipped)
+INC_IN_REC_ADDON_4 := true
+
+############################ #########################################################
+# CUSTOM ADDONS - OPTIONAL # Custom addons! Yea fully optional but.. GREAT STUFF! :) #
+############################ #########################################################
+
+# SHRP can be extended as YOU wish! You can add whatever you can think of
+# e.g patching a ROM, adding stuff, apps, there is no limit ;)
+# Addons will be shown in the "Tweaks" section of SHRP.
+
+# Custom addon folder. Do not forget to put a "/" at the end of the path!
+SHRP_EXTERNAL_ADDON_PATH := "device/<device-brand>/$(SHRP_DEVICE_CODE)/<AddonFolderName>/"
+
+# Addon #1 - Name
+SHRP_EXTERNAL_ADDON_1_NAME := "LOS Recorder"
+# Addon #1 - Description
+SHRP_EXTERNAL_ADDON_1_INFO := "A magisk module which add lineageOS recorder into your system"
+# Addon #1 - Addon file name as ZIP (zip format is required)
+SHRP_EXTERNAL_ADDON_1_FILENAME := "GUUN.zip"
+# Addon #1 - Free defineable button text the user need to press to actually install that addon
+# (Examples: Ok, Install, Flask, Enable, Disable, etc)
+SHRP_EXTERNAL_ADDON_1_BTN_TEXT := "Install"
+# Addon #1 - Text beeing shown when the installation was successful
+SHRP_EXTERNAL_ADDON_1_SUCCESSFUL_TEXT := "Installed"
+# Addon #1 - Inject the addon into the recovery (if so: be sure that it will fit into the partition)
+# Default (if not set) is injecting this addon
+SHRP_INC_IN_REC_EXTERNAL_ADDON_1 := true
+
+# As you might already guess from the naming scheme: 
+# You can add multiple custom addons (max amount is 6)!
+#
+# just add the above flags again and replace:
+# SHRP_EXTERNAL_ADDON_1_XXXX
+# with
+# SHRP_EXTERNAL_ADDON_2_XXXX for the second addon
+# and for the third up to the sixth change it accordingly: 
+# SHRP_EXTERNAL_ADDON_3_XXXX, SHRP_EXTERNAL_ADDON_4_XXXX, SHRP_EXTERNAL_ADDON_5_XXXX, SHRP_EXTERNAL_ADDON_6_XXXX
 ```
 
 # Reference Configuration
