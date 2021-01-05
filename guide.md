@@ -181,7 +181,8 @@ SHRP_EXTERNAL_ADDON_1_BTN_TEXT := "Install"
 # Addon #1 - Text beeing shown when the installation was successful
 SHRP_EXTERNAL_ADDON_1_SUCCESSFUL_TEXT := "Installed"
 # Addon #1 - Inject the addon into the recovery (if so: be sure that it will fit into the partition)
-# Default (if not set) is injecting this addon
+# Default (if not set) is NOT injecting this addon
+# Set this variable when true ONLY (do not use "false" or similiar)
 SHRP_INC_IN_REC_EXTERNAL_ADDON_1 := true
 
 # As you might already guess from the naming scheme: 
