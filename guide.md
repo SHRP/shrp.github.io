@@ -128,34 +128,58 @@ SHRP_LITE := true
 # This section allows to disable some or all of them, e.g. to save a little space
 # or when a device does not support / need them.
 
+#####
+# DEFAULT behavior if neither
+# - SHRP_SKIP_DEFAULT_ADDON_X nor
+# - INC_IN_REC_ADDON_X
+# are set:
+# the addon will be added to the build and saved into the internal storage
+# on flashing (i.e: $(SHRP_INTERNAL)/SHRP/addons)
+#
+# SHRP_SKIP_DEFAULT_ADDON_X := true
+# --> will not add this addon
+#
+# INC_IN_REC_ADDON_X := true
+# --> will add this addon & store it within the recovery ramdisk (i.e. NOT in the internal storage!)
+#
+# If SHRP_SKIP_DEFAULT_ADDON_X is set INC_IN_REC_ADDON_X will be ignored!
+#
+######
+
 # Addon - Substratum Overlay (OMS -Normal- disabler)
 # Default (if not set) is not skipping this addon (i.e. add it)
+# Ensure you understood the above note on the default behavior!
 SHRP_SKIP_DEFAULT_ADDON_1 := true
-# when SHRP_SKIP_DEFAULT_ADDON is set to true:
-# inject that addon into the recovery ramdisk
-# Default (if not set) is injecting this addon (if not skipped)
+# Default (if not set) is NOT adding it to the ramdisk but internal storage.
+# To store this addon into the recovery ramdisk instead set to "true" here.
+# Ensure you understood the above note on the default behavior!
 INC_IN_REC_ADDON_1 := true
 
 # Addon - Substratum Overlay (OMS -legacy- disabler)
 # Default (if not set) is not skipping this addon (i.e. add it)
+# Ensure you understood the above note on the default behavior!
 SHRP_SKIP_DEFAULT_ADDON_2 := true
-# when SHRP_SKIP_DEFAULT_ADDON is set to true:
-# inject that addon into the recovery ramdisk
-# Default (if not set) is injecting this addon (if not skipped)
+# Default (if not set) is NOT adding it to the ramdisk but internal storage.
+# To store this addon into the recovery ramdisk instead set to "true" here.
+# Ensure you understood the above note on the default behavior!
 INC_IN_REC_ADDON_2 := true
 
 # Addon - Clear Fingerprint (remove fingerprint lock from system)
 # Default (if not set) is not skipping this addon (i.e. add it)
+# Ensure you understood the above note on the default behavior!
 SHRP_SKIP_DEFAULT_ADDON_3 := true
-# inject that addon into the recovery ramdisk
-# Default (if not set) is injecting this addon (if not skipped)
+# Default (if not set) is NOT adding it to the ramdisk but internal storage.
+# To store this addon into the recovery ramdisk instead set to "true" here.
+# Ensure you understood the above note on the default behavior!
 INC_IN_REC_ADDON_3 := true
 
 # Addon - Force Encryption (remove force encryption from your device)
 # Default (if not set) is not skipping this addon (i.e. add it)
+# Ensure you understood the above note on the default behavior!
 SHRP_SKIP_DEFAULT_ADDON_4 := true
-# inject that addon into the recovery ramdisk
-# Default (if not set) is injecting this addon (if not skipped)
+# Default (if not set) is NOT adding it to the ramdisk but internal storage.
+# To store this addon into the recovery ramdisk instead set to "true" here.
+# Ensure you understood the above note on the default behavior!
 INC_IN_REC_ADDON_4 := true
 
 ############################ #########################################################
@@ -181,7 +205,8 @@ SHRP_EXTERNAL_ADDON_1_BTN_TEXT := "Install"
 # Addon #1 - Text beeing shown when the installation was successful
 SHRP_EXTERNAL_ADDON_1_SUCCESSFUL_TEXT := "Installed"
 # Addon #1 - Inject the addon into the recovery (if so: be sure that it will fit into the partition)
-# Default (if not set) is NOT injecting this addon
+# Default (if not set) is NOT adding this addon into the recovery ramdisk. That means:
+# If you do NOT set this the addon will be saved into the internal storage (i.e: $(SHRP_INTERNAL)/SHRP/addons)
 # Set this variable when true ONLY (do not use "false" or similiar)
 SHRP_INC_IN_REC_EXTERNAL_ADDON_1 := true
 
