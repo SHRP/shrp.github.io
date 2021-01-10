@@ -182,6 +182,12 @@ SHRP_SKIP_DEFAULT_ADDON_4 := true
 # Ensure you understood the above note on the default behavior!
 INC_IN_REC_ADDON_4 := true
 
+
+# Default (if not set) is NOT adding it to the ramdisk but internal storage.
+# To store magisk zip into the recovery ramdisk instead set to "true" here.
+# Ensure you understood the above note on the default behavior!
+INC_IN_REC_MAGISK := true
+
 ############################ #########################################################
 # CUSTOM ADDONS - OPTIONAL # Custom addons! Yea fully optional but.. GREAT STUFF! :) #
 ############################ #########################################################
