@@ -16,4 +16,4 @@
 [Download](downloads) |
 [Changelogs](changelogs) |
 [Contact](contact) |
-[GitHub](https://github.com/SKYHAWK-Recovery-Project)
+[GitHub](https://github.com/SHRP)

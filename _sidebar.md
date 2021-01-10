@@ -2,6 +2,7 @@
 * [Downloads](downloads.md)
 * [Build Guide](guide.md)
 * [Maintainers Guide](maintain.md)
+* [Theme Builder](theme.md)
 * [XDA Example Thread](xda.md)
 * [Changelogs](changelogs.md)
 * [FAQs](faq.md)

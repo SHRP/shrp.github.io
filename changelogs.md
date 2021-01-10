@@ -1,3 +1,20 @@
+## SHRP 3.0 Changelogs
+
+* Bump to SHRP 3.0
+* Ui/Ux improvements
+* Faster filemanager operation
+* Multiselection support
+* Better text editor
+* Checksum support (MD5, SHA1 & SHA256)
+* Added gui permission settings
+* Filemanager now supports extract zip in different location
+* Better protection system
+* New manager for magisk
+* Added support of custom addons (Check guide for more info)
+* More controls over the theme
+* And much more
+
+
 ## SHRP 2.3 Changelogs
 
 * Bump to SHRP 2.3

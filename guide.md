@@ -198,7 +198,7 @@ SHRP_EXTERNAL_ADDON_1_NAME := "LOS Recorder"
 # Addon #1 - Description
 SHRP_EXTERNAL_ADDON_1_INFO := "A magisk module which add lineageOS recorder into your system"
 # Addon #1 - Addon file name as ZIP (zip format is required)
-SHRP_EXTERNAL_ADDON_1_FILENAME := "GUUN.zip"
+SHRP_EXTERNAL_ADDON_1_FILENAME := "los_recorder.zip"
 # Addon #1 - Free defineable button text the user need to press to actually install that addon
 # (Examples: Ok, Install, Flask, Enable, Disable, etc)
 SHRP_EXTERNAL_ADDON_1_BTN_TEXT := "Install"
@@ -233,7 +233,7 @@ https://raw.githubusercontent.com/epicX67/twrp_device_coolpad_c103/treble/BoardC
 * To initialize your local repository using the OMNIROM trees to build SHRP, use a command like this:
 
 ```bash
-repo init -u git://github.com/SKYHAWK-Recovery-Project/platform_manifest_twrp_omni.git -b android-9.0
+repo init -u git://github.com/SHRP/platform_manifest_twrp_omni.git -b v3_9.0
 ```
 * Then to sync up:
 

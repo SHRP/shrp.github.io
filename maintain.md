@@ -89,7 +89,7 @@ Add a new *CI script* for your device by
 
 
 
-[team]: https://skyhawk-recovery-project.github.io/#/contact?id=team
+[team]: https://shrp.github.io/#/contact?id=team
 [dt]: https://github.com/SHRP-Devices
 [build]: guide.md
 [community]: https://t.me/sky_hawk
