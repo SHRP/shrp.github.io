@@ -1,6 +1,6 @@
 All SHRP builds are available on [Sourceforge](https://sourceforge.net/projects/shrp/files/).
 
-Also you can check device list from [here](https://shrp.team/devices).
+Also you can check device list from [here](https://skyhawkrecovery.github.io/Devices.html).
 
 [![Download SHRP](https://img.shields.io/sourceforge/dm/shrp.svg)](https://sourceforge.net/projects/shrp/files/latest/download)
 [![Download SHRP](https://img.shields.io/sourceforge/dw/shrp.svg)](https://sourceforge.net/projects/shrp/files/latest/download)
