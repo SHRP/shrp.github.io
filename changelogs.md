@@ -1,3 +1,15 @@
+## SHRP 3.1 Changelogs
+
+* Bump to SHRP 3.1
+* TWRP version bump to 3.5.1
+* Added support for dynamic devices
+* Bug fixes for magisk manager
+* Fixed recovery crash in flash section
+* Cleaned up many portion of the recovery
+* Updated some translation
+* Updated prebuilt magisk to v22
+
+
 ## SHRP 3.0 Changelogs
 
 * Bump to SHRP 3.0
