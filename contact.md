@@ -38,6 +38,7 @@ Get in contact with us though one of the following options.
 * Jcadduono for disable_dm-verify
 * Henloboi for Q branch fixes
 * TechyMinati for Q branch fixes
+* BRock for Q branch fixes
 * And all the developers whoever contributed to TWRP & SHRP
 * If we missed anyone's name in this list leave a message into our telegram group
 
