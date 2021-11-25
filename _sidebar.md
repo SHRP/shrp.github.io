@@ -1,7 +1,7 @@
 - [Home](/)
 - [Downloads](downloads.md)
 - [DT Guide](dtGuide.md)
-- [Build Guide](buildGuide.md)
+- [Build Guide](guide.md)
 - [Maintainers Guide](maintain.md)
 - [Theme Builder](theme.md)
 - [XDA Example Thread](xda.md)
