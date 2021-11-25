@@ -8,7 +8,7 @@
             "src": "./_media/shrp-logo.png",
             "sizes": "250x183",
             "type": "image/png"
-        },
+        }
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
