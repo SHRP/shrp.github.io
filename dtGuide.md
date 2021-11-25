@@ -238,50 +238,9 @@ SHRP_INC_IN_REC_EXTERNAL_ADDON_1 := true
 # SHRP_EXTERNAL_ADDON_3_XXXX, SHRP_EXTERNAL_ADDON_4_XXXX, SHRP_EXTERNAL_ADDON_5_XXXX, SHRP_EXTERNAL_ADDON_6_XXXX
 ```
 
+<br /><br />
+
 # Reference Configuration
 
-```bash
-https://raw.githubusercontent.com/epicX67/twrp_device_coolpad_c103/treble/BoardConfig.mk
-```
-
-# Build SHRP
-
-- To initialize your local repository using the OMNIROM trees to build SHRP, use a command like this:
-
-**Available Branches**
-
-| android versions | branch  |
-| :--------------: | :-----: |
-|        9         | v3_9.0  |
-|        10        | v3_10.0 |
-|        11        | v3_11.0 |
-
-```bash
-repo init -u git://github.com/SHRP/manifest.git -b v3_9.0
-```
-
-- Then to sync up:
-
-```bash
-repo sync
-```
-
-- Then to build for a device with recovery partition:
-
-```bash
-cd <source-dir>
-
-export ALLOW_MISSING_DEPENDENCIES=true
-
- . build/envsetup.sh
-
- lunch omni_<device>-eng
-
- mka recoveryimage
-```
-
-- or in one line
-
-```
-export ALLOW_MISSING_DEPENDENCIES=true; source build/envsetup.sh; lunch omni_<device>-eng; mka recoveryimage
-```
+This configuration will give you a basic idea about flags.
+Click [here](https://raw.githubusercontent.com/SHRP-Devices/device_coolpad_c103/treble/BoardConfig.mk) to view.
