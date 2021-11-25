@@ -92,6 +92,12 @@ SHRP_NOTCH := true
 # Set this variable when true ONLY (do not use "false" or similiar)
 SHRP_EXPRESS := true
 
+# SHRP Express use Data save shrp files inside /data instead of /system
+# Note - SHRP_EXPRESS must be true to use this flag otherwise it won't work.
+# Default (if not set) will use /system if SHRP_EXPRESS true otherwise will use legacy method of patching
+# Set this variable when true ONLY (do not use "false" or similiar)
+SHRP_EXPRESS_USE_DATA := true
+
 # SHRP Dark mode, use this flag to have dark theme set by default
 # Default (if not set) is not using DARK mode
 # Set this variable when true ONLY (do not use "false" or similiar)
