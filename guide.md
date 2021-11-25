@@ -1,14 +1,14 @@
-
 # Bring Up SHRP
 
 Configure SHRP in `BoardConfig.mk`
+
 ```bash
 # NOTE:
-# Don't use '-' or blank spaces in flag values! 
+# Don't use '-' or blank spaces in flag values!
 # These will create build errors or other bugs in recovery (Excluding SHRP_PATH,SHRP_REC).
 #
 # NOTE-2:
-# all values within these brackets: "<" ">" showing choice values and need to be 
+# all values within these brackets: "<" ">" showing choice values and need to be
 # replaced by you with the correct values!
 # Example: if the codename of your device is "gtexslte" <device-codename> becomes:
 # SHRP_DEVICE_CODE := gtexslte
@@ -188,6 +188,11 @@ INC_IN_REC_ADDON_4 := true
 # Ensure you understood the above note on the default behavior!
 INC_IN_REC_MAGISK := true
 
+# Default (if not set) will show magisk root and unroot option inside the recovery.
+# To hide the prebuilt magisk flash option from recovery, set value to "true".
+# Ensure you understood the above note on the default behavior!
+SHRP_EXCLUDE_MAGISK_FLASH := true
+
 ############################ #########################################################
 # CUSTOM ADDONS - OPTIONAL # Custom addons! Yea fully optional but.. GREAT STUFF! :) #
 ############################ #########################################################
@@ -216,14 +221,14 @@ SHRP_EXTERNAL_ADDON_1_SUCCESSFUL_TEXT := "Installed"
 # Set this variable when true ONLY (do not use "false" or similiar)
 SHRP_INC_IN_REC_EXTERNAL_ADDON_1 := true
 
-# As you might already guess from the naming scheme: 
+# As you might already guess from the naming scheme:
 # You can add multiple custom addons (max amount is 6)!
 #
 # just add the above flags again and replace:
 # SHRP_EXTERNAL_ADDON_1_XXXX
 # with
 # SHRP_EXTERNAL_ADDON_2_XXXX for the second addon
-# and for the third up to the sixth change it accordingly: 
+# and for the third up to the sixth change it accordingly:
 # SHRP_EXTERNAL_ADDON_3_XXXX, SHRP_EXTERNAL_ADDON_4_XXXX, SHRP_EXTERNAL_ADDON_5_XXXX, SHRP_EXTERNAL_ADDON_6_XXXX
 ```
 
@@ -235,19 +240,19 @@ https://raw.githubusercontent.com/epicX67/twrp_device_coolpad_c103/treble/BoardC
 
 # Build SHRP
 
-
-* To initialize your local repository using the OMNIROM trees to build SHRP, use a command like this:
+- To initialize your local repository using the OMNIROM trees to build SHRP, use a command like this:
 
 ```bash
 repo init -u git://github.com/SHRP/platform_manifest_twrp_omni.git -b v3_9.0
 ```
-* Then to sync up:
+
+- Then to sync up:
 
 ```bash
 repo sync
 ```
 
-* Then to build for a device with recovery partition:
+- Then to build for a device with recovery partition:
 
 ```bash
 cd <source-dir>
@@ -261,7 +266,8 @@ export ALLOW_MISSING_DEPENDENCIES=true
  mka recoveryimage
 ```
 
-* or in one line
+- or in one line
+
 ```
 export ALLOW_MISSING_DEPENDENCIES=true; source build/envsetup.sh; lunch omni_<device>-eng; mka recoveryimage
 ```
