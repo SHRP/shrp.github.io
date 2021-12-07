@@ -39,5 +39,6 @@ Get in contact with us though one of the following options.
 - Henloboi for Q branch fixes
 - TechyMinati for Q branch fixes
 - BRock for Q branch fixes
+- Aswin(dotA) for A11 manifest fixes, shrp bot (founder)
 - And all the developers whoever contributed to TWRP & SHRP
 - If we missed anyone's name in this list leave a message into our telegram group
