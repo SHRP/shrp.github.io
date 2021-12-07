@@ -965,10 +965,26 @@ code {
     margin: 1rem;
   }
 
+  .markdown-section {
+    max-width: max-content;
+  }
+
+  pre {
+    padding: 0.3rem !important;
+  }
+
   .sidebar-toggle {
-    all: unset;
-    position: fixed;
-    bottom: 0;
-    margin: 0.5rem;
+    width: 10px;
+    height: 49px;
+    transform: translate(10px, -2px);
+    display: grid;
+    place-content: center;
+    padding: 0;
+  }
+
+  body.close .sidebar-toggle {
+    background: transparent;
+    width: 10px;
+    transform: translateX(1.5rem);
   }
 }
