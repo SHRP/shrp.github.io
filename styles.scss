@@ -973,18 +973,41 @@ code {
     padding: 0.3rem !important;
   }
 
-  .sidebar-toggle {
-    width: 10px;
-    height: 49px;
-    transform: translate(10px, -2px);
-    display: grid;
-    place-content: center;
-    padding: 0;
+  .sidebar-toggle,
+  body.close .sidebar-toggle {
+    all: unset;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 111;
+    display: block;
+    background: var(--fg);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.445);
+
+    & > * {
+      padding: 0;
+      margin: 0;
+      display: grid !important;
+      place-content: center;
+      gap: 0.2rem;
+
+      span {
+        background: var(--sbg);
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+    }
   }
 
   body.close .sidebar-toggle {
-    background: transparent;
-    width: 10px;
-    transform: translateX(1.5rem);
+    background: var(--fg-st);
   }
 }
