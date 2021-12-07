@@ -1132,7 +1132,7 @@ h1 * {
 }
 
 .github-corner svg .octo-body {
-  fill: var(--theme-color);
+  fill: white;
 }
 
 code::-webkit-scrollbar {
