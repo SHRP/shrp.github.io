@@ -23,7 +23,7 @@ repo init -u git://github.com/SHRP/manifest.git -b v3_9.0
 - Then to sync up:
 
 ```bash
-repo sync
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
 
 - Then to build for a device with recovery partition:
@@ -57,7 +57,7 @@ repo init -u git://github.com/SHRP/manifest.git -b v3_10.0
 - Then to sync up:
 
 ```bash
-repo sync
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
 
 - Then to build for a device with recovery partition:
@@ -91,7 +91,7 @@ repo init -u git://github.com/SHRP/manifest.git -b v3_11.0
 - Then to sync up:
 
 ```bash
-repo sync
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
 
 - Then to build for a device with recovery partition:
