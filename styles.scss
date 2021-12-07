@@ -13,7 +13,7 @@
 :root {
   --bg: #0d1117;
   --sbg: #161b22;
-  --fg: #6194a7;
+  --fg: #75b3ca;
   --fg-st: #6194a727;
   --gradient: linear-gradient(to left, var(--theme-color), rgb(65, 62, 255));
   --gradient2: linear-gradient(to bottom, var(--theme-color), rgb(65, 62, 255));
@@ -944,6 +944,16 @@ h1 * {
 
   .octo-body {
     fill: white;
+  }
+}
+
+code {
+  * {
+    filter: brightness(1.5);
+  }
+
+  .comment {
+    filter: brightness(0.8) !important;
   }
 }
 
