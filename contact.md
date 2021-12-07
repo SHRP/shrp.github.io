@@ -24,7 +24,7 @@ Get in contact with us though one of the following options.
 - steadfasterX for security enhancements
 - DarthJabba9 for /data fix
 - Corsicanu for SAR fixes
-- GeopJr for enhaned version of shrp theme builder
+- GeopJr for enhanced version of shrp theme builder
 - oddlyspaced for SHRP App
 - Kirill
 - Burak D.
