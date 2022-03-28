@@ -17,7 +17,7 @@ SHRP is now available for a11 native devices (Beta)
 - To initialize your local repository using the OMNIROM trees to build SHRP, use a command like this:
 
 ```bash
-repo init -u git://github.com/SHRP/manifest.git -b v3_9.0
+repo init -u https://github.com/SHRP/manifest.git -b v3_9.0
 ```
 
 - Then to sync up:
@@ -51,7 +51,7 @@ source build/envsetup.sh; lunch omni_<device>-eng; mka recoveryimage
 - To initialize your local repository using the OMNIROM trees to build SHRP, use a command like this:
 
 ```bash
-repo init -u git://github.com/SHRP/manifest.git -b v3_10.0
+repo init -u https://github.com/SHRP/manifest.git -b v3_10.0
 ```
 
 - Then to sync up:
@@ -85,7 +85,7 @@ source build/envsetup.sh; lunch omni_<device>-eng; mka recoveryimage
 - To initialize your local repository using the OMNIROM trees to build SHRP, use a command like this:
 
 ```bash
-repo init -u git://github.com/SHRP/manifest.git -b v3_11.0
+repo init -u https://github.com/SHRP/manifest.git -b v3_11.0
 ```
 
 - Then to sync up:
