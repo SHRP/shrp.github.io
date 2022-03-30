@@ -109,5 +109,5 @@ mka recoveryimage
 - or in one line
 
 ```
-source build/envsetup.sh; lunch omni_<device>-eng; mka recoveryimage
+source build/envsetup.sh; lunch twrp_<device>-eng; mka recoveryimage
 ```
