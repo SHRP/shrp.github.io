@@ -30,7 +30,7 @@ You can find us on GitHub/Telegram: [@epicX67](https://t.me/epicX67), [@DNI9](ht
 
 ## Q: What's the website of SHRP?
 
-This is the only website of SHRP. [[CLICK HERE]](https://shrp.team)
+This is the only website of SHRP. [[CLICK HERE]](https://shrp.github.io/#/)
 
 ## Q: SHRP is not available for my device, what can I do!?
 
