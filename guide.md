@@ -111,3 +111,11 @@ mka recoveryimage
 ```
 source build/envsetup.sh; lunch twrp_<device>-eng; mka recoveryimage
 ```
+
+- Otherwise to build for a device without a recovery partition use:
+
+```
+mka bootimage
+```
+
+
