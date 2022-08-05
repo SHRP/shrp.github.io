@@ -1,6 +1,8 @@
-# Bring Up SHRP
+# SHRP Build Flags
 
 Configure SHRP in `BoardConfig.mk`
+
+## Notes
 
 ```bash
 # NOTE:
@@ -13,7 +15,11 @@ Configure SHRP in `BoardConfig.mk`
 # Example: if the codename of your device is "gtexslte" <device-codename> becomes:
 # SHRP_DEVICE_CODE := gtexslte
 # (so without any brackets ofc!)
+```
 
+## Mandatory flags
+
+```bash
 ################### ############################################
 # MANDATORY FLAGS # These flags HAVE TO be set/changed by you! #
 ################### ############################################
@@ -43,6 +49,10 @@ SHRP_DEVICE_TYPE := <A_Only|A/B>
 # No default
 SHRP_REC := </dev/block/bootdevice/by-name/recovery>
 
+```
+## Important flags
+
+```bash
 ################### ################################################################################
 # IMPORTANT FLAGS # These are usually good to check - at least if the defaults are what you expect #
 ################### ################################################################################
@@ -66,7 +76,11 @@ SHRP_OTG := /usb_otg
 # Flashlight: (0 = disable, 1 = enable)
 # Default (if not set): 0
 SHRP_FLASH := <0|1>
+```
 
+## Optional flags
+
+```bash
 ################## #########################################################################
 # OPTIONAL FLAGS # Stuff which highly depends on your device and / or personal preferences #
 ################## #########################################################################
@@ -125,7 +139,11 @@ SHRP_NO_SAR_AUTOMOUNT := true
 # Default (if not set) is full theming support
 # Set this variable when true ONLY (do not use "false" or similiar)
 SHRP_LITE := true
+```
 
+## Default addons
+
+```bash
 ################################## ##############################################
 # SHRP DEFAULT ADDONS - OPTIONAL # Default SHRP addon behavior - fully optional #
 ################################## ##############################################
@@ -188,7 +206,6 @@ SHRP_SKIP_DEFAULT_ADDON_4 := true
 # Ensure you understood the above note on the default behavior!
 INC_IN_REC_ADDON_4 := true
 
-
 # Default (if not set) is NOT adding it to the ramdisk but internal storage.
 # To store magisk zip into the recovery ramdisk instead set to "true" here.
 # Ensure you understood the above note on the default behavior!
@@ -198,7 +215,11 @@ INC_IN_REC_MAGISK := true
 # To hide the prebuilt magisk flash option from recovery, set value to "true".
 # Ensure you understood the above note on the default behavior!
 SHRP_EXCLUDE_MAGISK_FLASH := true
+```
 
+## Custom addons
+
+```bash
 ############################ #########################################################
 # CUSTOM ADDONS - OPTIONAL # Custom addons! Yea fully optional but.. GREAT STUFF! :) #
 ############################ #########################################################
@@ -238,9 +259,7 @@ SHRP_INC_IN_REC_EXTERNAL_ADDON_1 := true
 # SHRP_EXTERNAL_ADDON_3_XXXX, SHRP_EXTERNAL_ADDON_4_XXXX, SHRP_EXTERNAL_ADDON_5_XXXX, SHRP_EXTERNAL_ADDON_6_XXXX
 ```
 
-<br /><br />
-
-# Reference Configuration
+## Reference Configuration
 
 This configuration will give you a basic idea about flags.
 Click [here](https://raw.githubusercontent.com/SHRP-Devices/device_coolpad_c103/treble/BoardConfig.mk) to view.
