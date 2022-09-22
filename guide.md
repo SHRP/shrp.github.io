@@ -9,6 +9,7 @@ SHRP is now available for a11 native devices (Beta)
 |        9         | v3_9.0  |
 |        10        | v3_10.0 |
 |        11        | v3_11.0 |
+|        12(WIP)        | shrp-12.1|
 
 <br />
 
@@ -30,11 +31,8 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
 ```bash
 cd <source-dir>
-
 . build/envsetup.sh
-
 lunch omni_<device>-eng
-
 mka recoveryimage
 ```
 
@@ -64,11 +62,8 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
 ```bash
 cd <source-dir>
-
 . build/envsetup.sh
-
 lunch omni_<device>-eng
-
 mka recoveryimage
 ```
 
@@ -82,7 +77,7 @@ source build/envsetup.sh; lunch omni_<device>-eng; mka recoveryimage
 
 # Android 11
 
-- To initialize your local repository using the OMNIROM trees to build SHRP, use a command like this:
+- To initialize your local repository using the TWRP trees to build SHRP, use a command like this:
 
 ```bash
 repo init -u https://github.com/SHRP/manifest.git -b v3_11.0
@@ -98,11 +93,8 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
 ```bash
 cd <source-dir>
-
 . build/envsetup.sh
-
 lunch twrp_<device>-eng
-
 mka recoveryimage
 ```
 
@@ -118,4 +110,28 @@ source build/envsetup.sh; lunch twrp_<device>-eng; mka recoveryimage
 mka bootimage
 ```
 
+<br /><br />
 
+# Android 12.1
+WORK IN PROGRESS! MAY NOT WORK AT ALL
+
+- To initialize your local repository using the TWRP trees to build SHRP, use a command like this:
+
+```bash
+repo init -u https://github.com/SHRP/manifest.git -b shrp-12.1
+```
+
+- Then to sync up:
+
+```bash
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+```
+- Then to setup the build:
+```bash
+cd <source-dir>; export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch twrp_<device>-eng
+```
+
+- The build target is dependent on the device, and should reflect the location of stock recovery on the device. Issue the build command that applies to your device:
+- Recovery partition: ```bash mka recoveryimage``` or ```bash source build/envsetup.sh; lunch twrp_<device>-eng; mka recoveryimage```
+- Boot image: ```bash mka bootimage``` or ```bash source build/envsetup.sh; lunch twrp_<device>-eng; mka bootimage```
+- Vendor_boot image: ```bash mka vendorbootimage``` or ```bash source build/envsetup.sh; lunch twrp_<device>-eng; mka vendorbootimage```
