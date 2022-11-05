@@ -1,7 +1,5 @@
 # Build SHRP
 
-SHRP is now available for a11 native devices (Beta)
-
 **Available Branches**
 
 | android versions | branch  |
@@ -9,7 +7,7 @@ SHRP is now available for a11 native devices (Beta)
 |        9         | v3_9.0  |
 |        10        | v3_10.0 |
 |        11        | v3_11.0 |
-|        12(WIP)        | shrp-12.1|
+|        12        | shrp-12.1|
 
 <br />
 
@@ -113,7 +111,6 @@ mka bootimage
 <br /><br />
 
 # Android 12.1
-WORK IN PROGRESS! MAY NOT WORK AT ALL
 
 - To initialize your local repository using the TWRP trees to build SHRP, use a command like this:
 
