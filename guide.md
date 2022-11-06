@@ -43,6 +43,7 @@ source build/envsetup.sh; lunch omni_<device>-eng; mka recoveryimage
 <br /><br />
 
 # Android 10
+Android 10 isn't supported anymore. We recommend to use Android 11 branch for up to date support
 
 - To initialize your local repository using the OMNIROM trees to build SHRP, use a command like this:
 
@@ -75,7 +76,7 @@ source build/envsetup.sh; lunch omni_<device>-eng; mka recoveryimage
 
 # Android 11
 
-- To initialize your local repository using the TWRP trees to build SHRP, use a command like this:
+- To initialize your local repository using the AOSP trees to build SHRP, use a command like this:
 
 ```bash
 repo init -u https://github.com/SHRP/manifest.git -b v3_11.0
@@ -96,23 +97,15 @@ lunch twrp_<device>-eng
 mka recoveryimage
 ```
 
-- or in one line
-
-```
-source build/envsetup.sh; lunch twrp_<device>-eng; mka recoveryimage
-```
-
-- Otherwise to build for a device without a recovery partition use:
-
-```
-mka bootimage
-```
+- The build target is dependent on the device, and should reflect the location of stock recovery on the device. Issue the build command that applies to your device:
+- Recovery partition: ```bash mka recoveryimage``` or ```bash source build/envsetup.sh; lunch twrp_<device>-eng; mka recoveryimage```
+- Boot image: ```bash mka bootimage``` or ```bash source build/envsetup.sh; lunch twrp_<device>-eng; mka bootimage```
 
 <br /><br />
 
 # Android 12.1
 
-- To initialize your local repository using the TWRP trees to build SHRP, use a command like this:
+- To initialize your local repository using the AOSP trees to build SHRP, use a command like this:
 
 ```bash
 repo init -u https://github.com/SHRP/manifest.git -b shrp-12.1
