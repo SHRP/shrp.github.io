@@ -88,18 +88,14 @@ repo init -u https://github.com/SHRP/manifest.git -b v3_11.0
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
 
-- Then to build for a device with recovery partition:
-
+- Then to setup the build:
 ```bash
-cd <source-dir>
-. build/envsetup.sh
-lunch twrp_<device>-eng
-mka recoveryimage
+cd <source-dir>; export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch twrp_<device>-eng
 ```
 
-- The build target is dependent on the device, and should reflect the location of stock recovery on the device. Issue the build command that applies to your device:
-- Recovery partition: ```bash mka recoveryimage``` or ```bash source build/envsetup.sh; lunch twrp_<device>-eng; mka recoveryimage```
-- Boot image: ```bash mka bootimage``` or ```bash source build/envsetup.sh; lunch twrp_<device>-eng; mka bootimage```
+The build target is dependent on the device, and should reflect the location of stock recovery on the device. Issue the build command that applies to your device:
+- Recovery partition: ```mka recoveryimage``` or ```source build/envsetup.sh; lunch twrp_<device>-eng; mka recoveryimage```
+- Boot image: ```mka bootimage``` or ```source build/envsetup.sh; lunch twrp_<device>-eng; mka bootimage```
 
 <br /><br />
 
@@ -121,7 +117,7 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 cd <source-dir>; export ALLOW_MISSING_DEPENDENCIES=true; . build/envsetup.sh; lunch twrp_<device>-eng
 ```
 
-- The build target is dependent on the device, and should reflect the location of stock recovery on the device. Issue the build command that applies to your device:
-- Recovery partition: ```bash mka recoveryimage``` or ```bash source build/envsetup.sh; lunch twrp_<device>-eng; mka recoveryimage```
-- Boot image: ```bash mka bootimage``` or ```bash source build/envsetup.sh; lunch twrp_<device>-eng; mka bootimage```
-- Vendor_boot image: ```bash mka vendorbootimage``` or ```bash source build/envsetup.sh; lunch twrp_<device>-eng; mka vendorbootimage```
+The build target is dependent on the device, and should reflect the location of stock recovery on the device. Issue the build command that applies to your device:
+- Recovery partition: ```mka recoveryimage``` or ```source build/envsetup.sh; lunch twrp_<device>-eng; mka recoveryimage```
+- Boot image: ```mka bootimage``` or ```source build/envsetup.sh; lunch twrp_<device>-eng; mka bootimage```
+- Vendor_boot image: ```mka vendorbootimage``` or ```source build/envsetup.sh; lunch twrp_<device>-eng; mka vendorbootimage```
